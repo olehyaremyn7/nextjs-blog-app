@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "paths": {
+      "@/*": ["."],
+      "@/app/*": ["./app/*"],
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/constants/*": ["./constants/*"],
+      "@/context/*": ["./context/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/db/*": ["./db/*"],
+      "@/services/*": ["./services/*"],
+      "@/config/*": ["./config/*"]
+    }
+  }
+}

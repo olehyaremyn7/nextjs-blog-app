@@ -1,0 +1,152 @@
+.root {
+  width: 100%;
+  height: var(--size-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socialNetworks {
+  flex: 1;
+}
+
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: var(--size-36);
+  font-weight: bold;
+}
+
+.navigation {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--size-20);
+}
+
+.themeToggle {
+  margin-right: var(--size-10);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: var(--size-24);
+  height: var(--size-18);
+  margin-left: var(--size-6);
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: var(--size-2);
+  border-radius: var(--size-2);
+  background: var(--color-text-primary);
+  transition: 0.3s;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+  transition: 0.2s ease-in-out;
+}
+
+.line-1.isClosed {
+  transform: rotate(45deg) translate(4px, 7px);
+}
+
+.line-2.isClosed {
+  transform: translateX(10px);
+  background: transparent;
+}
+
+.line-3.isClosed {
+  transform: rotate(-45deg) translate(4px, -7px);
+}
+
+.responsiveMenu {
+  position: fixed;
+  top: var(--size-100);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  transition: 0.35s;
+  z-index: -1;
+  overflow-y: hidden;
+}
+
+.responsiveMenu .effectBlock {
+  background: var(--color-background-surface);
+  translate: -100% 0;
+  transition: 0.2s ease-in-out;
+}
+
+.responsiveMenu.active {
+  z-index: 999;
+}
+
+.responsiveMenu.active .effectBlock {
+  translate: 0;
+}
+
+.effectBlock-2 {
+  transition-delay: 0.1s !important;
+}
+
+.effectBlock-3 {
+  transition-delay: 0.2s !important;
+}
+
+.effectBlock-4 {
+  transition-delay: 0.3s !important;
+}
+
+.effectBlock-5 {
+  transition-delay: 0.4s !important;
+}
+
+.navigationLinksSkeleton {
+  width: 19.875rem;
+}
+
+@media screen and (max-width: 1280px) {
+  .logo {
+    font-size: var(--size-32);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .socialNetworks {
+    display: none;
+  }
+
+  .logo {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: var(--size-24);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .navigation {
+    justify-content: flex-end;
+  }
+
+  .navigationLinksSkeleton {
+    width: 12.375rem;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .themeToggle {
+    margin-right: 0;
+  }
+}

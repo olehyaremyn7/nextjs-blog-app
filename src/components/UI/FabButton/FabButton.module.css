@@ -1,0 +1,65 @@
+.root {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: var(--size-44);
+  height: var(--size-44);
+  background: var(--color-basic-action);
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--size-14);
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  border: none;
+  outline: none;
+  transition: background 0.25s;
+}
+
+.root:not(:disabled):active {
+  box-shadow: var(--action-active-shadow);
+}
+
+.root:not(:disabled):focus {
+  box-shadow: var(--action-focus-shadow);
+}
+
+.root:disabled {
+  background-color: var(--color-disabled-action) !important;
+  color: var(--color-common-black) !important;
+  cursor: not-allowed;
+}
+
+.root > figure {
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.primary {
+  background: var(--color-alternative-action);
+}
+
+.primary:not(:disabled):hover {
+  background: var(--color-alternative-action-hover);
+}
+
+.root > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  translate: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  font-size: var(--size-12);
+  transition: 0.4s;
+}
+
+.root:not(:disabled):hover > span {
+  translate: 0;
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,44 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  height: var(--size-350);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-30);
+}
+
+.date {
+  color: var(--color-text-grey);
+}
+
+.desc {
+  font-size: var(--size-18);
+  font-weight: 300;
+  color: var(--color-text-soft);
+}
+
+.link {
+  border-bottom: var(--border-default-width) solid var(--color-primary-action);
+  width: max-content;
+  padding: var(--size-2) 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .imageContainer {
+    display: none;
+  }
+}

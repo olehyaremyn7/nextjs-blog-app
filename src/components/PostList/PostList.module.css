@@ -1,0 +1,32 @@
+.root {
+  flex: 5;
+}
+
+.title {
+  margin: var(--size-50) 0;
+}
+
+.posts {
+  display: grid;
+  gap: var(--size-50) 0;
+}
+
+.post {
+  height: auto;
+}
+
+.post:last-of-type {
+  margin-bottom: var(--size-50);
+}
+
+.noPosts {
+  min-height: var(--size-350);
+  display: grid;
+  place-items: center;
+}
+
+.noPosts p {
+  text-align: center;
+  font-size: var(--size-18);
+  font-weight: 500;
+}

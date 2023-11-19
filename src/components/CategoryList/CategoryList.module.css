@@ -1,0 +1,86 @@
+.root {
+  margin-top: var(--size-50);
+}
+
+.list {
+  margin-top: var(--size-50);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-200), 1fr));
+  grid-auto-rows: var(--size-80);
+  align-content: center;
+  gap: var(--size-20);
+}
+
+.listItem {
+  display: grid;
+  place-items: center;
+  border-radius: var(--size-10);
+  transition: 0.3s;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-10);
+  text-transform: capitalize;
+}
+
+.listItem.style {
+  background-color: var(--color-style-category);
+}
+
+.listItem.style:hover {
+  background-color: var(--color-style-category-hover);
+}
+
+.listItem.fashion {
+  background-color: var(--color-fashion-category);
+}
+
+.listItem.fashion:hover {
+  background-color: var(--color-fashion-category-hover);
+}
+
+.listItem.food {
+  background-color: var(--color-food-category);
+}
+
+.listItem.food:hover {
+  background-color: var(--color-food-category-hover);
+}
+
+.listItem.travel {
+  background-color: var(--color-travel-category);
+}
+
+.listItem.travel:hover {
+  background-color: var(--color-travel-category-hover);
+}
+
+.listItem.culture {
+  background-color: var(--color-culture-category);
+}
+
+.listItem.culture:hover {
+  background-color: var(--color-culture-category-hover);
+}
+
+.listItem.coding {
+  background-color: var(--color-coding-category);
+}
+
+.listItem.coding:hover {
+  background-color: var(--color-coding-category-hover);
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.noCategories {
+  margin: var(--size-40);
+  text-align: center;
+  font-size: var(--size-18);
+  font-weight: 500;
+}

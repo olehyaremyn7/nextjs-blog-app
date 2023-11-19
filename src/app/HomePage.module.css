@@ -1,0 +1,103 @@
+.introSkeleton {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+}
+
+.introSkeleton div {
+  flex: 1;
+}
+
+.categoriesSkeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-200), 1fr));
+  grid-auto-rows: var(--size-80);
+  align-content: center;
+  gap: var(--size-20);
+}
+
+.errorWrapper,
+.notFoundWrapper {
+  min-height: var(--size-600);
+  display: grid;
+  place-items: center;
+}
+
+.error,
+.notFoundInfo {
+  display: grid;
+  gap: var(--size-30);
+}
+
+.notFoundInfo {
+  flex: 2;
+}
+
+.error h1,
+.notFoundInfo h1 {
+  font-size: var(--size-34);
+}
+
+.error p,
+.notFoundInfo p {
+  font-size: var(--size-18);
+}
+
+.errorAction,
+.notFoundAction {
+  margin-top: var(--size-12);
+  display: flex;
+  gap: var(--size-16);
+}
+
+.notFound {
+  display: flex;
+  gap: var(--size-24);
+}
+
+.notFoundImage {
+  flex: 1 0;
+  display: grid;
+  place-items: center;
+  border-left: var(--border-default-width) solid var(--color-text-hover);
+}
+
+.notFoundImage span {
+  display: inline-flex;
+  font-size: var(--size-100);
+  margin: var(--size-34);
+}
+
+@media screen and (max-width: 1024px) {
+  .introSkeletonImage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .notFoundInfo h1 {
+    font-size: var(--size-30);
+  }
+
+  .notFoundInfo p {
+    font-size: var(--size-16);
+  }
+
+  .notFoundImage span {
+    font-size: var(--size-64);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .error h1 {
+    font-size: var(--size-28);
+  }
+
+  .error p {
+    font-size: var(--size-16);
+  }
+
+  .notFoundImage {
+    display: none;
+  }
+}

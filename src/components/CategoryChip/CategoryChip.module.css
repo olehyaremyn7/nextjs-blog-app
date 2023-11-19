@@ -1,0 +1,40 @@
+.root {
+  width: max-content;
+  border-radius: var(--size-10);
+  color: var(--color-text-hover);
+  text-transform: capitalize;
+}
+
+.menu {
+  padding: var(--size-4) var(--size-8);
+  font-size: var(--size-12);
+}
+
+.post {
+  padding: var(--size-6) var(--size-10);
+  font-size: var(--size-14);
+}
+
+.travel {
+  background-color: var(--color-travel-menu-category);
+}
+
+.culture {
+  background-color: var(--color-culture-menu-category);
+}
+
+.food {
+  background-color: var(--color-food-menu-category);
+}
+
+.fashion {
+  background-color: var(--color-fashion-menu-category);
+}
+
+.coding {
+  background-color: var(--color-coding-menu-category);
+}
+
+.style {
+  background-color: var(--color-style-menu-category);
+}

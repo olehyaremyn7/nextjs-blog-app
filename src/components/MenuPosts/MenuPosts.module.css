@@ -1,0 +1,76 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-36);
+}
+
+.root:hover .title,
+.root:hover .detail {
+  opacity: 0.3;
+}
+
+.root:hover .date {
+  color: var(--color-text-soft);
+}
+
+.root .title:hover,
+.root .title:hover + .detail {
+  opacity: 1;
+}
+
+.root .title:hover + .date {
+  color: var(--color-text-grey);
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: var(--size-20);
+}
+
+.imageContainer {
+  flex: 1;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.image {
+  border-radius: 50%;
+  border: var(--size-2) solid rgb(211, 211, 211);
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-6);
+}
+
+.title {
+  font-size: var(--size-18);
+  font-weight: 500;
+  color: var(--color-text-soft);
+  transition: 0.3s;
+}
+
+.title:hover {
+  color: var(--color-text-hover);
+}
+
+.detail {
+  font-size: var(--size-12);
+  transition: 0.3s;
+}
+
+.date {
+  color: var(--color-text-grey);
+  transition: 0.3s;
+}
+
+.noPosts {
+  margin: var(--size-20);
+  text-align: center;
+  font-size: var(--size-16);
+  font-weight: 500;
+}

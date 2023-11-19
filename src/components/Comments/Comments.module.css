@@ -1,0 +1,55 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-40);
+  margin-top: var(--size-50);
+}
+
+.title {
+  font-size: var(--size-24);
+  font-weight: 700;
+  color: var(--color-text-soft);
+}
+
+.comments {
+  flex: 1;
+  display: grid;
+  gap: var(--size-40);
+}
+
+.loading {
+  position: relative;
+  min-height: var(--size-100);
+  margin-bottom: var(--size-28);
+}
+
+.noComments {
+  font-size: var(--size-18);
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-text-soft);
+}
+
+.noDataComments {
+  gap: var(--size-20);
+}
+
+.noData {
+  padding: var(--size-22);
+  border: var(--border-default-width) solid var(--color-text-soft);
+  border-radius: var(--border-radius-default-size);
+}
+
+.loginLink {
+  width: max-content;
+  padding: var(--size-2);
+  border-bottom: var(--border-default-width) solid var(--color-primary-action);
+  text-transform: capitalize;
+  color: var(--color-text-primary);
+}
+
+@media screen and (max-width: 1280px) {
+  .noComments {
+    font-size: var(--size-16);
+  }
+}

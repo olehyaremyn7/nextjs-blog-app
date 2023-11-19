@@ -1,0 +1,82 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-6) 0;
+}
+
+.invalid label,
+.invalid select {
+  color: var(--color-control-invalid);
+  border-color: var(--color-control-invalid);
+}
+
+.helperText {
+  font-size: var(--size-14);
+  font-weight: 400;
+  color: var(--color-text-soft);
+}
+
+.control {
+  position: relative;
+  margin-top: var(--size-14);
+}
+
+.noLabel {
+  margin-top: 0 !important;
+}
+
+.select {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: calc(var(--size-14) - var(--size-1));
+  color: var(--color-text-primary);
+  background-color: var(--color-background-soft);
+  border: var(--border-default-width) solid var(--color-text-soft);
+  border-radius: var(--border-radius-default-size);
+  font-size: var(--size-16);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.111;
+  text-decoration: none;
+  text-transform: none;
+  outline: none;
+  caret-color: var(--color-text-primary);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select::-ms-expand {
+  display: none;
+}
+
+.select > option {
+  color: var(--color-text-primary);
+}
+
+.select:not(:disabled):hover {
+  border: var(--size-2) solid var(--color-control-hover);
+  padding: calc(var(--size-14) - var(--size-2));
+}
+
+.select:not(:disabled):focus {
+  border: var(--size-2) solid var(--color-control-hover);
+  box-shadow: 0px 0px 0px 2px var(--color-control-focus);
+  padding: calc(var(--size-14) - var(--size-2));
+}
+
+.icon {
+  position: absolute;
+  top: 35%;
+  right: var(--size-14);
+  pointer-events: none;
+}
+
+.error {
+  margin-top: var(--size-6);
+  font-size: var(--size-16);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}

@@ -1,0 +1,51 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: var(--size-44);
+  height: var(--size-22);
+  border-radius: var(--size-50);
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  user-select: none;
+}
+
+.sunIcon {
+  right: var(--size-4);
+}
+
+.moonIcon {
+  left: var(--size-4);
+}
+
+.ball {
+  position: absolute;
+  width: var(--size-16);
+  height: var(--size-16);
+  border-radius: 50%;
+  z-index: 2;
+  transition: right 0.3s ease-in-out;
+}
+
+.darkToggle {
+  background-color: var(--color-light-toggle);
+}
+
+.lightToggle {
+  background-color: var(--color-dark-toggle);
+}
+
+.darkBall {
+  right: 1.563rem;
+  background: var(--color-dark-toggle);
+}
+
+.lightBall {
+  right: var(--size-4);
+  background: var(--color-light-toggle);
+}

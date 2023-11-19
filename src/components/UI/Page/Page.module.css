@@ -1,0 +1,8 @@
+.root {
+  margin: var(--size-30) 0;
+}
+
+.title {
+  margin-bottom: var(--size-30);
+  font-size: var(--size-40);
+}

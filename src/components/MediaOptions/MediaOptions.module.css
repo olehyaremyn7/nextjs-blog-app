@@ -1,0 +1,186 @@
+.mediaOptions {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 5;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mediaOptionsFab {
+  z-index: 1;
+  width: var(--size-54);
+  height: var(--size-54);
+}
+
+.mediaOptionsFab > figure {
+  rotate: 0deg;
+  transition: 0.2s;
+}
+
+.mediaOptionsActive .mediaOptionsFab > figure {
+  rotate: 45deg;
+}
+
+.mediaOptionFab {
+  width: var(--size-44);
+  height: var(--size-44);
+  background: var(--color-background-overflow);
+  transition: 0.3s;
+}
+
+.mediaOptionFab:not(:disabled):hover {
+  background: var(--color-background-overflow-hover);
+}
+
+.mediaOptionFab > span {
+  top: var(--size-58);
+  left: -1.375rem;
+}
+
+.uploadExternal > span {
+  left: -2rem;
+}
+
+.menu {
+  position: absolute;
+  top: var(--size-6);
+  left: var(--size-80);
+  width: var(--size-84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-24);
+  scale: 0;
+  translate: -80% 0;
+  transform-origin: 50% 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.375s;
+}
+
+.mediaOptionsActive .menu {
+  scale: 1;
+  translate: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.loading {
+  background: transparent;
+  position: relative;
+  width: var(--size-44);
+  height: var(--size-44);
+}
+
+.loading svg {
+  position: absolute;
+  width: var(--size-44);
+  height: var(--size-44);
+  fill: none;
+}
+
+.loading svg circle {
+  stroke-width: 20;
+}
+
+.rail {
+  z-index: 1;
+}
+
+.bar {
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+
+.rail > circle {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.bar > circle {
+  stroke: var(--color-success-action);
+  stroke-linecap: round;
+  stroke-dasharray: 628 628;
+  transition: stroke-dashoffset 2s ease;
+}
+
+.showCheck {
+  display: block !important;
+}
+
+.checkmark {
+  display: none;
+}
+
+.draw:after {
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-name: checkmark;
+  transform: scaleX(-1) rotate(140deg);
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  left: var(--size-10);
+  top: var(--size-24);
+  opacity: 1;
+  height: var(--size-18);
+  width: var(--size-10);
+  transform-origin: left top;
+  border-right: 0.188rem solid var(--color-success-checkmark);
+  border-top: 0.188rem solid var(--color-success-checkmark);
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+    height: 0;
+    width: var(--size-10);
+  }
+  40% {
+    opacity: 1;
+    height: var(--size-18);
+    width: var(--size-10);
+  }
+  100% {
+    opacity: 1;
+    height: var(--size-18);
+    width: var(--size-10);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .mediaOptions {
+    top: 23%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mediaOptions {
+    top: 22%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mediaOptions {
+    top: 20%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mediaOptions {
+    top: 26%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .mediaOptions {
+    top: 25%;
+  }
+}

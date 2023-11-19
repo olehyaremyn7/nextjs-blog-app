@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  gap: var(--size-10);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  display: block;
+  height: auto;
+}
+
+.socialIcon {
+  display: block;
+  user-select: none;
+}

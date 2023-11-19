@@ -1,0 +1,19 @@
+.root {
+  margin-top: var(--size-50);
+  display: grid;
+  gap: var(--size-48);
+}
+
+.questionsList {
+  display: grid;
+  gap: var(--size-34);
+}
+
+.skeletonQuestions {
+  display: grid;
+  gap: var(--size-30);
+}
+
+.skeletonQuestion:nth-child(odd) {
+  width: 50%;
+}

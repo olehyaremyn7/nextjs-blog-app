@@ -1,0 +1,7 @@
+.root {
+  font-size: var(--size-18);
+  font-weight: 500;
+  letter-spacing: normal;
+  line-height: 1.111;
+  color: var(--color-text-primary);
+}

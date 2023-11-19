@@ -1,0 +1,93 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: var(--size-20);
+}
+
+.root:hover .link,
+.rootResponsive:hover .link {
+  opacity: 0.25;
+}
+
+.root:hover .link[data-active='true']::after,
+.rootResponsive:hover .link[data-active='true']::after {
+  transform: scaleX(0);
+}
+
+.root .link:hover,
+.rootResponsive .link:hover {
+  opacity: 1;
+}
+
+.rootResponsive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--size-50);
+  transition: 0.3s;
+}
+
+.rootResponsive.open {
+  opacity: 1;
+}
+
+.rootResponsive .link {
+  font-size: var(--size-36);
+  font-weight: 500;
+}
+
+.rootResponsive.open li {
+  animation: appear 0.4s both;
+}
+
+.rootResponsive li:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.rootResponsive li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.rootResponsive li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.rootResponsive li:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.rootResponsive li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.rootResponsive li:nth-child(6) {
+  animation-delay: 0.9s;
+}
+
+@media screen and (max-width: 1280px) {
+  .root {
+    gap: var(--size-16);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .root {
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: 0 20px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}

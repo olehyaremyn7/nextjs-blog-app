@@ -1,0 +1,86 @@
+.root {
+  display: grid;
+  gap: var(--size-50);
+}
+
+.presentation {
+  display: grid;
+  gap: var(--size-24);
+}
+
+.photos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--size-40);
+}
+
+.imageContainer {
+  position: relative;
+  flex: 1 1 var(--size-300);
+  max-width: 100%;
+  height: var(--size-350);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.coreValues {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+  flex-wrap: wrap;
+}
+
+.coreValue {
+  flex: 1 0 var(--size-200);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-16);
+}
+
+.features {
+  display: grid;
+  gap: var(--size-30);
+}
+
+.feature {
+  display: grid;
+  gap: var(--size-16);
+}
+
+.feedbacks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--size-300), 1fr));
+  grid-auto-rows: auto;
+  align-content: center;
+  gap: var(--size-24);
+}
+
+.feedback {
+  margin-top: var(--size-18);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--size-14);
+}
+
+.feedback p {
+  padding: var(--size-6) 0;
+  margin-top: var(--size-8);
+  border-top: var(--border-default-width) solid var(--color-text-hover);
+  text-align: right;
+}
+
+@media screen and (max-width: 640px) {
+  .photos,
+  .gallery {
+    display: none;
+  }
+
+  .feedbacks {
+    grid-template-columns: repeat(auto-fill, minmax(var(--size-200), 1fr));
+  }
+}

@@ -1,0 +1,104 @@
+.root {
+  display: grid;
+  place-items: center;
+}
+
+.wrapper {
+  display: grid;
+  padding: var(--size-150) var(--size-200);
+  gap: var(--size-60);
+  background-color: var(--color-background-soft);
+  border-radius: var(--size-10);
+}
+
+.title {
+  font-size: var(--size-26);
+  font-weight: bold;
+  text-align: center;
+}
+
+.titleSkeleton {
+  height: 5rem;
+  margin-top: -2.5rem;
+  margin-bottom: -1rem;
+}
+
+.authButtonsSkeleton {
+  height: var(--size-382);
+  display: grid;
+  gap: var(--size-50);
+}
+
+.authButtonSkeleton {
+  width: 17.188rem;
+  height: var(--size-58);
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: var(--size-100) var(--size-150);
+  }
+
+  .title {
+    font-size: var(--size-20);
+  }
+
+  .authButtonsSkeleton {
+    height: var(--size-374);
+  }
+
+  .authButtonSkeleton {
+    width: 13.25rem;
+    height: var(--size-56);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: var(--size-64);
+  }
+
+  .title {
+    font-size: var(--size-20);
+  }
+
+  .titleSkeleton {
+    height: var(--size-60);
+    margin-top: -1rem;
+  }
+
+  .authButtonsSkeleton {
+    height: var(--size-312);
+    gap: var(--size-40);
+  }
+
+  .authButtonSkeleton {
+    height: var(--size-48);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    padding: var(--size-44);
+  }
+
+  .title {
+    font-size: var(--size-18);
+  }
+
+  .titleSkeleton {
+    height: var(--size-40);
+    margin-top: 0;
+  }
+
+  .authButtonsSkeleton {
+    height: var(--size-284);
+    gap: var(--size-36);
+  }
+
+  .authButtonSkeleton {
+    width: 11.875rem;
+    height: var(--size-44);
+  }
+}

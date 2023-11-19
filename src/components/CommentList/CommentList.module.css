@@ -1,0 +1,14 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-50);
+}
+
+.userProfile {
+  margin-bottom: var(--size-20);
+}
+
+.comment {
+  font-size: var(--size-18);
+  font-weight: 300;
+}

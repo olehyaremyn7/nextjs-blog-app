@@ -1,0 +1,74 @@
+.root {
+  display: grid;
+  gap: var(--size-50);
+}
+
+.article {
+  display: grid;
+  gap: var(--size-24);
+}
+
+.features {
+  columns: 3 var(--size-48);
+}
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--size-50);
+  flex-wrap: wrap;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-16);
+}
+
+.contactInfoList {
+  margin-top: var(--size-8);
+  display: grid;
+  gap: var(--size-10);
+}
+
+.linkList:hover .link {
+  opacity: 0.3;
+}
+
+.linkList .link:hover {
+  opacity: 1;
+}
+
+.link {
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: var(--color-text-hover);
+}
+
+.contactBlocksSkeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-auto-rows: 20rem;
+  align-content: center;
+  gap: var(--size-16);
+}
+
+@media screen and (max-width: 1024px) {
+  .features {
+    columns: 2 var(--size-50);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    columns: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contactBlocksSkeleton {
+    grid-template-columns: repeat(auto-fill, minmax(var(--size-200), 1fr));
+  }
+}

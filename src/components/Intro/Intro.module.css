@@ -1,0 +1,89 @@
+.title {
+  font-size: var(--size-96);
+  font-weight: 300;
+}
+
+.cursor {
+  font-weight: bold;
+  animation: blink 1s linear infinite;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  gap: var(--size-50);
+  margin-top: var(--size-60);
+}
+
+.imgContainer {
+  flex: 1;
+  position: relative;
+  height: 31.25rem;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-20);
+}
+
+.postTitle {
+  font-size: var(--size-40);
+}
+
+.postDesc {
+  font-size: var(--size-20);
+  font-weight: 300;
+  color: var(--color-text-soft);
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: var(--size-72);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: var(--size-64);
+  }
+
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: var(--size-48);
+  }
+
+  .postTitle {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: var(--size-36);
+  }
+
+  .postTitle {
+    font-size: var(--size-32);
+  }
+}
+
+@keyframes blink {
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

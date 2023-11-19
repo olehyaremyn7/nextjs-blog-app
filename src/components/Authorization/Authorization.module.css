@@ -1,0 +1,83 @@
+.root {
+  position: relative;
+  min-height: var(--size-382);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, minmax(var(--size-58), 1fr));
+  gap: var(--size-50);
+}
+
+.authButton {
+  width: 100% !important;
+  padding: var(--size-20) !important;
+  font-size: var(--size-16) !important;
+  text-transform: none !important;
+}
+
+.authButton.google {
+  background-color: var(--color-auth-google-action);
+}
+
+.authButton.google:not(:disabled):hover {
+  background-color: var(--color-auth-google-action-hover) !important;
+}
+
+.authButton.apple {
+  background-color: var(--color-auth-apple-action);
+}
+
+.authButton.apple:not(:disabled):hover {
+  background-color: var(--color-auth-apple-action-hover) !important;
+}
+
+.authButton.github {
+  background-color: var(--color-auth-github-action);
+}
+
+.authButton.github:not(:disabled):hover {
+  background-color: var(--color-auth-github-action-hover) !important;
+}
+
+.authButton.facebook {
+  background-color: var(--color-auth-facebook-action);
+}
+
+.authButton.facebook:not(:disabled):hover {
+  background-color: var(--color-auth-facebook-action-hover) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .root {
+    min-height: var(--size-374);
+    grid-template-rows: repeat(auto-fill, minmax(var(--size-56), 1fr));
+  }
+
+  .authButton {
+    font-size: var(--size-14) !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .root {
+    min-height: var(--size-312);
+    grid-template-rows: repeat(auto-fill, minmax(var(--size-48), 1fr));
+    gap: var(--size-40);
+  }
+
+  .authButton {
+    padding: var(--size-16) !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .root {
+    min-height: var(--size-284);
+    grid-template-rows: repeat(auto-fill, minmax(var(--size-44), 1fr));
+    gap: var(--size-36);
+  }
+
+  .authButton {
+    padding: var(--size-14) !important;
+    font-weight: 400 !important;
+  }
+}
