@@ -10,3 +10,5 @@ export const THEMES = Object.freeze({
   LIGHT: 'light',
   DARK: 'dark',
 });
+
+export const NOT_AUTHENTICATED = '401 Not Authenticated';

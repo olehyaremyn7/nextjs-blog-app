@@ -6,7 +6,7 @@ import TitleInputSkeleton from '@/components/Skeletons/TitleInputSkeleton';
 import styles from './WritePage.module.css';
 
 const Loading = () => (
-  <Page classes={styles.root}>
+  <Page>
     <div className={styles.headerSkeleton}>
       <SelectCategorySkeleton />
       <PublishButtonSkeleton />

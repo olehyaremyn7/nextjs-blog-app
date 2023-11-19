@@ -21,7 +21,7 @@ const NavigationLinks = ({
   const pathname = usePathname();
   const navigationLinks = useMemo(() => filterNavigationLinks(isAuthenticated), [isAuthenticated]);
 
-  const handleEditorKeyDownCapture = useCallback(
+  const handleNavigationLinkKeyDownCapture = useCallback(
     (event) => {
       if (!isResponsiveMenu) {
         return;
@@ -71,7 +71,7 @@ const NavigationLinks = ({
             }
             isLastLink={isResponsiveMenu ? index === getLastArrayElementIndex(navigationLinks) : null}
             onClick={isLogout ? onLogout : onCloseResponsiveMenu}
-            onKeyDownCapture={handleEditorKeyDownCapture}
+            onKeyDownCapture={handleNavigationLinkKeyDownCapture}
           />
         );
       })}

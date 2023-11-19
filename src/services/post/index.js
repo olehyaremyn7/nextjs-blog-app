@@ -1,6 +1,6 @@
 import prisma from '@/db/connect';
 import { getAuthSession } from '@/utils/authorization';
-import { POST_PER_PAGE, MENU_POSTS_COUNT } from '@/constants/index';
+import { POST_PER_PAGE, MENU_POSTS_COUNT, NOT_AUTHENTICATED } from '@/constants/index';
 
 // GET ALL POSTS
 export const fetchPosts = async ({ page = null, cat = null, popular = null, editors = null, comments = null }) => {
@@ -62,7 +62,7 @@ export const createPost = async (post) => {
     const session = await getAuthSession();
 
     if (!session) {
-      throw new Error('401 Not Authenticated');
+      throw new Error(NOT_AUTHENTICATED);
     }
 
     return prisma.post.create({

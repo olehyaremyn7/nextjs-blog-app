@@ -1,11 +1,10 @@
 :root {
   --color-common-white: rgb(255 255 255);
   --color-common-black: rgb(0 0 0);
-  --color-control-invalid: rgb(205, 0, 10);
-  --color-control-hover: rgba(69, 69, 219, 0.989);
-  --color-control-focus: rgba(98, 135, 255, 0.989);
 
   /* Light theme palette */
+
+  /* Background + text colors */
   --color-background-surface: rgb(255 255 255);
   --color-text-primary: rgb(0, 0, 0);
   --color-background-soft: rgb(240, 240, 240);
@@ -14,6 +13,8 @@
   --color-text-soft: rgb(98, 98, 98);
   --color-text-grey: rgb(117 117 117);
   --color-text-hover: rgb(16, 15, 16);
+
+  /* Categories */
   --color-travel-menu-category: rgb(255, 133, 102);
   --color-culture-menu-category: rgb(255, 153, 51);
   --color-food-menu-category: rgb(146, 211, 146);
@@ -32,7 +33,8 @@
   --color-fashion-category-hover: rgba(224, 21, 180, 0.313);
   --color-coding-category-hover: rgba(37, 20, 224, 0.312);
   --color-style-category-hover: rgba(22, 152, 222, 0.311);
-  --color-skeleton-background: rgba(0, 0, 0, 0.11);
+
+  /* Action elements */
   --color-primary-action: rgb(220, 20, 60);
   --color-primary-action-hover: rgb(192, 0, 38);
   --color-accent-action: rgb(32, 131, 120);
@@ -46,13 +48,19 @@
   --color-disabled-action: rgb(204, 204, 204);
   --color-success-action: rgb(26, 192, 162);
   --color-success-action-hover: rgb(0, 150, 123);
-  --action-focus-shadow: 0px 0px 0px 3px var(--color-control-focus);
-  --action-active-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
 
+  /* UI elements */
   --color-dark-toggle: rgb(15, 23, 42);
   --color-light-toggle: rgb(255 255 255);
   --color-success-checkmark: rgb(92, 184, 92);
+  --color-control-invalid: rgb(205, 0, 10);
+  --color-control-hover: rgba(69, 69, 219, 0.989);
+  --color-control-focus: rgba(98, 135, 255, 0.989);
+  --action-focus-shadow: 0px 0px 0px 3px var(--color-control-focus);
+  --action-active-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  --color-skeleton-background: rgba(0, 0, 0, 0.11);
 
+  /* Login methods */
   --color-auth-google-action: rgb(255, 85, 85);
   --color-auth-google-action-hover: rgb(233, 63, 63);
   --color-auth-apple-action: rgb(17, 17, 17);
@@ -62,11 +70,14 @@
   --color-auth-facebook-action: rgb(8, 123, 234);
   --color-auth-facebook-action-hover: rgb(0, 102, 198);
 
+  /* Application font-size */
   --base-font-size: 16px;
 
+  /* Border */
   --border-radius-default-size: 0.3rem;
   --border-default-width: 0.063rem;
 
+  /* Common application sizes */
   --size-1: 0.063rem; /* 1px / 16px */
   --size-2: 0.125rem; /* 2px / 16px */
   --size-4: 0.25rem; /* 4px / 16px */
@@ -114,24 +125,20 @@
   --size-382: 23.875rem; /* 382px / 16px */
   --size-600: 37.5rem; /* 600px / 16px */
 
+  /* Application layout  */
   --min-viewport-height: 100vh;
   --max-viewport-width: 100vw;
 
   /* Small devices (medium/small phones) */
   --breakpoint-xs: 576px;
-
   /* Small devices (large phones) */
   --breakpoint-sm: 640px;
-
   /* Medium devices (tablets) */
   --breakpoint-md: 768px;
-
   /* Large devices (laptops/desktops) */
   --breakpoint-lg: 1024px;
-
   /* Extra-large devices (large desktops) */
   --breakpoint-xl: 1280px;
-
   /* Extra-extra-large devices (ultra-large desktops) */
   --breakpoint-2xl: 1536px;
 }
@@ -148,6 +155,8 @@ html {
 
 html[data-theme='dark'] {
   /* Dark theme palette */
+
+  /* Background + text colors */
   --color-background-surface: rgb(15, 23, 42);
   --color-text-primary: rgb(221, 221, 221);
   --color-background-soft: rgb(31, 39, 58);
@@ -156,6 +165,8 @@ html[data-theme='dark'] {
   --color-text-soft: rgb(166, 166, 166);
   --color-text-grey: rgb(189 189 189);
   --color-text-hover: rgb(247, 247, 247);
+
+  /* Categories */
   --color-travel-menu-category: rgb(177, 31, 5);
   --color-culture-menu-category: rgb(181, 87, 5);
   --color-food-menu-category: rgb(2, 117, 44);
@@ -168,6 +179,8 @@ html[data-theme='dark'] {
   --color-fashion-category-hover: rgba(255, 97, 221, 0.513);
   --color-coding-category-hover: rgba(106, 92, 255, 0.506);
   --color-style-category-hover: rgba(88, 196, 255, 0.505);
+
+  /* UI elements */
   --color-control-hover: rgb(70, 65, 229);
   --color-control-focus: rgba(148, 148, 243, 0.956);
   --color-skeleton-background: rgba(255, 255, 255, 0.13);

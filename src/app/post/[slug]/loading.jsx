@@ -7,7 +7,7 @@ import { range } from '@/utils/index';
 import styles from './PostPage.module.css';
 
 const Loading = () => (
-  <Page classes={styles.root}>
+  <Page>
     <div className={styles.infoContainer}>
       <div className={styles.textContainerSkeleton}>
         <Skeleton sx={{ marginTop: '-3rem', marginBottom: '-3rem' }} variant="heading" height={250} />
