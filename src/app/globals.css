@@ -204,6 +204,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  list-style-position: inside;
+}
+
 .lock-scroll {
   overflow: hidden;
 }
