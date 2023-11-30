@@ -55,10 +55,10 @@ const AboutPage = () => (
       <section className={styles.presentation}>
         <h2>Our Story</h2>
         <p>
-          Founded in 20XX, our ${BLOG_NAME} app was conceived to empower voices and foster meaningful conversations. Nam
-          rhoncus scelerisque ex, ac hendrerit nulla pharetra quis. Etiam tempus eget libero id rutrum. Nulla quis metus
-          lectus. Morbi in suscipit est, a euismod nisi. Suspendisse sodales, est non feugiat pellentesque, nisi orci
-          ullamcorper lacus, vel tempor nunc dolor non purus. Integer malesuada venenatis bibendum.
+          Founded in 20XX, our {BLOG_NAME} company was conceived to empower voices and foster meaningful conversations.
+          Nam rhoncus scelerisque ex, ac hendrerit nulla pharetra quis. Etiam tempus eget libero id rutrum. Nulla quis
+          metus lectus. Morbi in suscipit est, a euismod nisi. Suspendisse sodales, est non feugiat pellentesque, nisi
+          orci ullamcorper lacus, vel tempor nunc dolor non purus. Integer malesuada venenatis bibendum.
         </p>
         <p>
           We ave grown from a simple idea to a vibrant community of diverse creators and readers. Curabitur rutrum leo
@@ -102,7 +102,7 @@ const AboutPage = () => (
       </section>
       <section className={styles.presentation}>
         <h2>Key Features</h2>
-        <p>Discover the array of features that make ${BLOG_NAME} stand out:</p>
+        <p>Discover the array of features that make {BLOG_NAME} stand out:</p>
         <ul className={styles.features}>
           {KEY_FEATURES.map(({ id, title, description }) => (
             <li key={`key-feature-${id}`} className={styles.feature}>

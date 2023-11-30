@@ -79,6 +79,20 @@
   .root {
     display: none;
   }
+
+  .rootResponsive {
+    gap: var(--size-60);
+  }
+
+  .rootResponsive .link {
+    font-size: var(--size-34);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .rootResponsive .link {
+    font-size: var(--size-30);
+  }
 }
 
 @keyframes appear {

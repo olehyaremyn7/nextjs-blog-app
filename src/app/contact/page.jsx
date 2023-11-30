@@ -48,9 +48,13 @@ const ContactPage = () => (
         <div className={styles.contactInfo}>
           <h2>Contact Information</h2>
           <ul className={styles.contactInfoList}>
-            {CONTACT_INFORMATION.map(({ id, method, contact }) => (
+            {CONTACT_INFORMATION.map(({ id, method, contact, href, target, label }) => (
               <li key={`contact-info-${id}`}>
-                <strong>{method}</strong>:{contact}
+                <strong>{method}</strong>
+                <span aria-hidden>:</span>{' '}
+                <a href={href} target={target} aria-label={label}>
+                  {contact}
+                </a>
               </li>
             ))}
           </ul>
