@@ -2,6 +2,7 @@
 
 import clsx from 'clsx';
 import { useRef, useState, useEffect } from 'react';
+import { range } from '@/utils/index';
 import PropTypes from 'prop-types';
 import styles from './Loader.module.css';
 
@@ -21,9 +22,9 @@ const Loader = ({ isWrapper = false, wrapperClasses, color = 'primary', classes 
 
   const Template = (
     <div role="alert" className={clsx(styles.root, styles[color], classes)} aria-live="assertive">
-      <div className={styles.dot} />
-      <div className={styles.dot} />
-      <div className={styles.dot} />
+      {range(0, 3).map((i) => (
+        <div key={`loader-dot-${i}`} className={styles.dot} />
+      ))}
       <span className="visually-hidden" aria-hidden={isHidden}>
         Loading
       </span>
