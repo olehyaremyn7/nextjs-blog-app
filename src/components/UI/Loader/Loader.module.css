@@ -24,15 +24,15 @@
   animation-delay: 667ms;
 }
 
-.primary {
+.primary .dot {
   background-color: var(--color-primary-action);
 }
 
-.accent {
+.accent .dot {
   background-color: var(--color-accent-action);
 }
 
-.warn {
+.warn .dot {
   background-color: var(--color-warn-action);
 }
 
