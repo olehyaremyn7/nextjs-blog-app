@@ -25,6 +25,10 @@
   color: var(--color-text-grey);
 }
 
+.dash {
+  margin: 0 var(--size-8);
+}
+
 .desc {
   font-size: var(--size-18);
   font-weight: 300;
