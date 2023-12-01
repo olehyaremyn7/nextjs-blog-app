@@ -26,10 +26,31 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isAuthenticated = checkIsAuthenticated(status);
 
+  const hidePageContent = () => {
+    const $main = document.querySelector('main');
+    const $footer = document.querySelector('footer');
+
+    if (!$main && !$footer) {
+      return;
+    }
+
+    if (!isOpen) {
+      $main.setAttribute('aria-hidden', true);
+      $footer.setAttribute('aria-hidden', true);
+    } else {
+      $main.removeAttribute('aria-hidden');
+      $footer.removeAttribute('aria-hidden');
+    }
+  };
+
+  const lockPageScrolling = () => {
+    document.body.classList.toggle('lock-scroll');
+  };
+
   const handleBurgerSwitchClick = () => {
     setIsOpen((prevState) => !prevState);
-
-    document.body.classList.toggle('lock-scroll');
+    hidePageContent();
+    lockPageScrolling();
   };
 
   const handleLogout = useCallback(() => {
