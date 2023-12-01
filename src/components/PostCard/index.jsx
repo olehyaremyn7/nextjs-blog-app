@@ -15,7 +15,10 @@ const PostCard = ({ img, catSlug, slug, title, desc, createdAt }) => (
     )}
     <div className={styles.textContainer}>
       <div className={styles.detail}>
-        <time className={styles.date}>{formatDate(createdAt, 'M.D.YYYY')} - </time>
+        <time className={styles.date}>{formatDate(createdAt, 'M.D.YYYY')}</time>
+        <span className={styles.dash} aria-hidden>
+          -
+        </span>
         <CategoryChip category={catSlug} />
       </div>
       <h3>

@@ -39,7 +39,10 @@ const MenuPosts = async ({ isImage, popular, editors, comments }) => {
             </h3>
             <div className={styles.detail}>
               <span className={styles.username}>{user?.name}</span>
-              <time className={styles.date}> - {formatDate(createdAt, 'M.D.YYYY')}</time>
+              <span className={styles.dash} aria-hidden>
+                -
+              </span>
+              <time className={styles.date}>{formatDate(createdAt, 'M.D.YYYY')}</time>
             </div>
           </div>
         </li>

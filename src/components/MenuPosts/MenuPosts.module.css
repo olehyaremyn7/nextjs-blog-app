@@ -68,6 +68,10 @@
   transition: 0.3s;
 }
 
+.dash {
+  margin: 0 var(--size-6);
+}
+
 .noPosts {
   margin: var(--size-20);
   text-align: center;
