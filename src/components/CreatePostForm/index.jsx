@@ -13,6 +13,7 @@ import { useSession } from 'next-auth/react';
 import { useForm, Controller } from 'react-hook-form';
 import { storage } from '@/db/storage';
 import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
+import { sanitize } from 'isomorphic-dompurify';
 import { createPostAction } from 'actions';
 import { getProgress, getUploadedFileName } from './utils';
 import { isLoading, isUnAuthenticated } from '@/utils/authorization';
@@ -103,10 +104,10 @@ const CreatePostForm = ({ categories }) => {
   }, [file]);
 
   const handleCreatePost = handleSubmit(
-    async ({ title, category: catSlug, content: desc }) =>
+    async ({ title, category: catSlug, content }) =>
       await createPostAction({
         title,
-        desc,
+        desc: sanitize(content),
         catSlug,
         img: media,
       }),

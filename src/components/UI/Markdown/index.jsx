@@ -1,7 +1,8 @@
+import { sanitize } from 'isomorphic-dompurify';
 import PropTypes from 'prop-types';
 
 const Markdown = ({ markdown, className }) => (
-  <article className={className} dangerouslySetInnerHTML={{ __html: markdown }} />
+  <article className={className} dangerouslySetInnerHTML={{ __html: sanitize(markdown) }} />
 );
 
 Markdown.propTypes = {
